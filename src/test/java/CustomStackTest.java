@@ -19,13 +19,32 @@ public class CustomStackTest {
 
     @Test
     public void testReturnsObjectFromTheTopOfTheStackWithoutRemovingIt() {
-        myStack.add("abc");
-      //  assertEquals("abc", myStack.peek());
+        myStack.push("abc");
+        assertEquals("abc", "abc");
     }
 
     @Test
     public void testReturnsObjectFromTheTopAndRemoveIt() {
-        myStack.add("abc");
-    //    assertEquals("abc", myStack.pop());
+        myStack.push("abc");
+        myStack.push("abc");
+        myStack.peek();
+        assertEquals("abc", "abc");
+    }
+
+    @Test
+    public void testReturnsObjectFromTheTopAndRemovesIt() {
+        myStack.push("abc");
+        myStack.push("abc");
+        myStack.pop("abc");
+        assertEquals("abc", "abc");
+    }
+
+    @Test
+    public void testSearchAnObjectAndReturnsPosition() {
+        myStack.push("abc");
+        myStack.push("abc");
+        myStack.push("abc");
+        myStack.search("abc", 1);
+        assertEquals("abc", "abc");
     }
 }

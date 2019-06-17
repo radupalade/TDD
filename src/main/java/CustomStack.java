@@ -1,54 +1,50 @@
-import java.awt.*;
-import java.util.Stack;
-
 public class CustomStack {
 
-    private Stack<String> stack;
-
+    //    private Stack<String> stack;
+    private int size = 0;
+    private String[] stack;
 
     public CustomStack() {
-        stack = new Stack<String>();
+        stack = new String[10];
     }
 
     public boolean isEmpty() {
-        if (stack.size() == 0) {
+        if (size == 0) {
             return true;
         } else return false;
     }
 
-    public void add(String val) {
+   /* public void add(String val) {
         stack.add(val);
-    }
+    }*/
 
-  /*  public void push() {
-        String value;
-        int size = 0;
-        Stack<String> stack = new Stack<String>();
-        stack[size] = value;
-        size++;
+    public void push(String val) {
+
+        stack[size] = val;
+        size++; //works until size[9]
 
     }
-*/
-  /*  public int peek(int size) {
+
+    public String peek() {
 
         return stack[size - 1];
-    }*/
-
-    /*public int pop(int size) {
-        int value = stack[size - 1];
-        stack[size - 1] = 0;
-        size--;
-        return value;
-
-    }*/
-
-    public String get(int index, int size) {
-        if (stack.size() == 0 || index > size - 1) {
-            return null;
-        }
-        return stack.get(index);
     }
 
+    public void pop(String val) {
+        val = stack[size - 1];
+        stack[size - 1] = String.valueOf(0);
+        size--;
+
+    }
+
+    public int search(String element, int index) {
+        if (stack[index] == element || index > size - 1) {
+            return index;
+        } else {
+            return -1;
+        }
+
+    }
 }
 
 

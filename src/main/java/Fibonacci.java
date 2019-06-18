@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Fibonacci {
 
     static int n1 = 0, n2 = 1, n3;
@@ -10,7 +8,7 @@ public class Fibonacci {
         this.n3 = n3;
     }
 
-    public void computeNonRecursive(int n) {
+    public static double computeNonRecursive(int n) {
 
         System.out.print(n1 + " " + n2);
 
@@ -29,9 +27,10 @@ public class Fibonacci {
         }
 
 
+        return 0;
     }
 
-    public int computeRecursive(int n) {
+    public static int computeRecursive(int n) {
         if (n < 2) {
             return n;
         } else {
@@ -41,24 +40,30 @@ public class Fibonacci {
 
     }
 
-   /* public static void main(String[] args) {
+    public static void main(String[] args) {
         int index = 30;
+        for (int i = 0; i < index; i++) {
+            System.out.print(computeRecursive(i) + " ");
+
+        }
         long start = System.currentTimeMillis();
         double result = computeRecursive(index);
-        end = System.currentTimeMillis();
+        long end = System.currentTimeMillis();
         System.out.println("f(" + index + ") = " + result + " : time = " + (end - start) + "ms");
-
+        //f(30) = 832040.0 : time = 8 - 12ms
+        //f(40) = 1.02334155E8 : time = 1083ms
+        //with index 50 takes too long
     }
-*//*
-     public static void main(String[] args) {
+    /* public static void main(String[] args) {
         int index = 30;
         long start = System.currentTimeMillis();
         double result = computeNonRecursive(index);
-        end = System.currentTimeMillis();
+        long end = System.currentTimeMillis();
         System.out.println("f(" + index + ") = " + result + " : time = " + (end - start) + "ms");
+        //f(30) = 0.0 : time = 0ms
+        //f(50) = 0.0 : time = 4ms
 
-    }
-*/
+    }*/
 }
 
 

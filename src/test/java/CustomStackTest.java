@@ -20,15 +20,14 @@ public class CustomStackTest {
     @Test
     public void testReturnsObjectFromTheTopOfTheStackWithoutRemovingIt() {
         myStack.push("abc");
-        assertEquals("abc", "abc");
+        assertEquals(myStack.push("abc"), "abc");
     }
 
     @Test
     public void testReturnsObjectFromTheTopAndRemoveIt() {
         myStack.push("abc");
-        myStack.push("abc");
-        myStack.peek();
-        assertEquals("abc", "abc");
+        myStack.push("def");
+        assertEquals("def", myStack.peek());
     }
 
     @Test
@@ -47,4 +46,5 @@ public class CustomStackTest {
         myStack.search("abc", 1);
         assertEquals("abc", "abc");
     }
+
 }

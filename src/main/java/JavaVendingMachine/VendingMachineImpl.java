@@ -181,6 +181,10 @@ public class VendingMachineImpl implements VendingMachine {
         return totalSales;
     }
 
+    public long getCurrentBalance() {
+        return currentBalance;
+    }
+
 }
 
 

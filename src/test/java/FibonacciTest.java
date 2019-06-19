@@ -31,4 +31,12 @@ public class FibonacciTest {
         myFibonacci.computeNonRecursive(10);
         assertEquals(10, 10);
     }
+
+    @Test
+    public void testFibonacciNumberWithIndexTwoThreeFiveAndEight() {
+        assertEquals(1, myFibonacci.computeRecursive(2));
+        assertEquals(2, myFibonacci.computeRecursive(3));
+        assertEquals(5, myFibonacci.computeRecursive(5));
+        assertEquals(21, myFibonacci.computeRecursive(8));
+    }
 }

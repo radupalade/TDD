@@ -18,10 +18,12 @@ public class CustomStack {
         stack.add(val);
     }*/
 
-    public void push(String val) {
+    public String push(String val) {
 
         stack[size] = val;
         size++; //works until size[9]
+
+        return val;
 
     }
 

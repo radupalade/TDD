@@ -18,16 +18,10 @@ public class Fibonacci {
             n1 = n2;
             n2 = n3;
 
-            if (n3 == n) {
-                System.out.println("fibonacci number");
-                break;
-
-            }
-
         }
 
 
-        return 0;
+        return n3;
     }
 
     public static int computeRecursive(int n) {
